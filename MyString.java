@@ -1,17 +1,22 @@
 public class MyString implements CharSequence,Comparable<CharSequence>{
   private char[] data;
   public MyString(CharSequence s){
-
+    data=new char[s.length()];
   }
 
   //Returns the char value at the specified index.
   public char charAt(int index) throws IndexOutOfBoundsException{
-
+    return data[index];
   }
 
   //Returns the length of this character sequence.
   public int length(){
-
+    int answer=0;
+    for(int i=0;i<data.length;i++)
+    {
+      answer++;
+    }
+    return answer;
   }
 
   //Returns a CharSequence that is a subsequence of this sequence.
