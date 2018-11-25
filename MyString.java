@@ -21,7 +21,12 @@ public class MyString implements CharSequence,Comparable<CharSequence>{
 
   //Returns a CharSequence that is a subsequence of this sequence.
   public CharSequence subSequence(int start, int end) throws IndexOutOfBoundsException{
-
+    char[] answer=new char[end-start+1];
+    for(int i=start,c=0;i<end+1;i++,c++)
+    {
+      answer[c]=data[i];
+    }
+    return answer;
   }
 
   //Returns a string containing the characters in this sequence in the same order as this sequence.
