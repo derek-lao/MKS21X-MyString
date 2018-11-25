@@ -21,17 +21,22 @@ public class MyString implements CharSequence,Comparable<CharSequence>{
 
   //Returns a CharSequence that is a subsequence of this sequence.
   public CharSequence subSequence(int start, int end) throws IndexOutOfBoundsException{
-    char[] answer=new char[end-start+1];
-    for(int i=start,c=0;i<end+1;i++,c++)
+    String answer="";
+    for(int i=start;i<end+1;i++)
     {
-      answer[c]=data[i];
+      answer+=data[i];
     }
     return answer;
   }
 
   //Returns a string containing the characters in this sequence in the same order as this sequence.
   public String toString(){
-
+    String answer="";
+    for(int i=0;i<data.length;i++)
+    {
+      answer+=data[i];
+    }
+    return answer;
   }
 
   //Compares this object with the specified object for order.
