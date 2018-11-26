@@ -27,7 +27,7 @@ public class MyString implements CharSequence,Comparable<CharSequence>{
 
   //Returns a CharSequence that is a subsequence of this sequence.
   public CharSequence subSequence(int start, int end){
-    if(start<0||start>=this.length()||end<0||end>=this.length())
+    if(start<0||start>=this.length()||end<0||end>=this.length()||start>end)
     throw new IndexOutOfBoundsException();
     String answer="";
     for(int i=start;i<end+1;i++)
