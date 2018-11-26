@@ -10,8 +10,8 @@ public class MyString implements CharSequence,Comparable<CharSequence>{
 
   //Returns the char value at the specified index.
   public char charAt(int index){
-    if(index<0 || index>data.length-1)
-    throw IndexOutOfBoundsException();
+    if(index<0 || index>=data.length)
+    throw new IndexOutOfBoundsException();
     return data[index];
   }
 
@@ -27,8 +27,8 @@ public class MyString implements CharSequence,Comparable<CharSequence>{
 
   //Returns a CharSequence that is a subsequence of this sequence.
   public CharSequence subSequence(int start, int end){
-    if(start<0||start>this.length()-1||end<0||end>this.length()-1)
-    throw IndexOutOfBoundsException();
+    if(start<0||start>=this.length()||end<0||end>=this.length())
+    throw new IndexOutOfBoundsException();
     String answer="";
     for(int i=start;i<end+1;i++)
     {
